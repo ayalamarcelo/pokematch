@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'ADLaM Display', cursive;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(./images/picture.png);
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  gap: 30px;
+  background: #fff;
+  padding: 40px 60px;
+}
+
+.reset {
+  display: flex;
+  padding: 15px 20px;
+  color: #fff;
+  background: #6563ff;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  border: none;
+  font-size: 1.0em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.reset:hover {
+  background: #fff;
+  color: #6563ff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.game {
+  width: 430px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+.generators {
+  display: flex;
+  color: #6563ff;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14em;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  font-size: 3em;
+  transition: 0.25s;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+}
+
+.item.boxOpen {
+  transform: rotateY(180deg);
+}
+
+.item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  transition: 0.25s;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+}
