@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path')
 const fs = require('fs');
@@ -6,6 +7,7 @@ const app = express();
 const PORT = process.env.PORT ?? 4040;
 
 const navController = require('./server/controllers/navController');
+const winController = require('./server/controllers/winController');
 
 app.use(express.static(path.join(__dirname, './client')));
 
@@ -21,6 +23,7 @@ app.get('/pokeAPI', (req, res) => {
 });
 
 app.get('/', navController.goIndex);
+app.post('/api/winner', winController.create);
 
 
 app.listen(PORT, () => {
