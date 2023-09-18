@@ -19,11 +19,13 @@ Follow the localhost url:
 ```bash
 $ Server listening on http://localhost:4040
 ```
-Open a cluster and paste this url to access the scoring:
+Open compass from mongoDB and paste this url to access the scoring:
 
 ```bash
 $ mongodb+srv://marcelorubenayala:password@cluster0.fuv8uu5.mongodb.net/pokeDB
 ```
+
+Here a link for MongoDB usage: [link] (https://www.freecodecamp.org/news/learn-mongodb-a4ce205e7739/ "How to get started with MongoDB in 10 minutes")
 
 ### Contributing
 
