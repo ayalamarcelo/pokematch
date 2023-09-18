@@ -1,4 +1,5 @@
-const { connectDB, disconnectDB } = require("../controllers/winController");
+const { connectDB, disconnectDB } = require("../connection");
+
 const winnerUser = require("../database/schemas/winnerSchema");
 
 const create = async (req, res) => {
