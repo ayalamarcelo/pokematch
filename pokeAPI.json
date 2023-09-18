@@ -82,5 +82,33 @@
       "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png"
       }
+    },
+    {
+      "id": 58,
+      "name": "Growlithe",
+      "sprites": {
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png"
+      }
+    },
+    {
+      "id": 59,
+      "name": "Arcanine",
+      "sprites": {
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png"
+      }
+    },
+    {
+      "id": 109,
+      "name": "Koffing",
+      "sprites": {
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png"
+      }
+    },
+    {
+      "id": 110,
+      "name": "Weezing",
+      "sprites": {
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png"
+      }
     }
   ]

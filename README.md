@@ -12,8 +12,16 @@ Then, running a new terminal:
 ```bash
 $ git clone
 $ npm install
-$ npm run start
-$ Server listening on http://localhost:8000
+$ npm run dev
+```
+Follow the localhost url: 
+
+```bash
+$ Server listening on http://localhost:4040
+```
+Open a cluster and paste this url to access the scoring:
+
+```bash
 $ mongodb+srv://marcelorubenayala:password@cluster0.fuv8uu5.mongodb.net/pokeDB
 ```
 
