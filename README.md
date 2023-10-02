@@ -5,12 +5,11 @@ Use the package manager:
 ```bash
 npm
 ```
-Then, running a new terminal:
- 
 ### Usage
+First step: `run a new terminal`
 
 ```bash
-$ git clone
+$ git clone https://github.com/ayalamarcelo/pokematch.git
 $ npm install
 $ npm run dev
 ```
