@@ -1,19 +1,30 @@
-## "PokeMatch, gotta match'em all!"
+###
 
-Use the package manager:
+<h1 align="center">"PokeMatch, gotta match'em all!"</h1>
+
+###
+
+Welcome to PokeMatch! This project allows you to experience the fun of memory games while diving into the exciting world of Pokémon. With PokeMatch, you can test your matching skills as you try to find pairs of your favorite Pokémon.
+
+Stay tuned for an immersive gaming experience where you can catch 'em all!
+
+
+
+- Use the package manager:
 
 ```bash
 npm
 ```
 ### Usage
-First step: `run a new terminal`
+
+- Run a new terminal.
 
 ```bash
 $ git clone https://github.com/ayalamarcelo/pokematch.git
 $ npm install
 $ npm run dev
 ```
-Follow the localhost url: 
+- Follow the localhost url: 
 
 ```bash
 $ Server listening on http://localhost:4040
