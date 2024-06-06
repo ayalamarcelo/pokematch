@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'ADLaM Display', cursive;
+  font-family: "Press Start 2P", system-ui;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url(./images/picture.png);
+  background: url(./assets/picture-demo.webp)no-repeat;
   background-size: cover;
 }
 
@@ -22,32 +22,31 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  gap: 30px;
+  gap: 20px;
   background: #fff;
-  padding: 40px 60px;
+  padding: 35px 60px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .reset {
   display: flex;
-  padding: 15px 20px;
+  padding: 18px 20px;
   color: #fff;
-  background: #6563ff;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-  border-radius: 10px;
+  background: #464973;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  border-radius: 5px;
   border: none;
-  font-size: 1.0em;
+  font-size: .7em;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 400;
   transition: background 0.3s, color 0.3s;
 }
 
 .reset:hover {
-  background: #fff;
-  color: #6563ff;
-  border-radius: 10px;
+  background: #545591;
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
@@ -59,14 +58,16 @@ body {
   gap: 10px;
   transform-style: preserve-3d;
   perspective: 800px;
+  position: relative;
 }
 
 .generators {
   display: flex;
-  color: #6563ff;
+  color: #464973;
   justify-content: space-between;
   align-items: center;
-  gap: 14em;
+  gap: 11em;
+  font-size: .8em;
   border-radius: 10px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -80,12 +81,15 @@ body {
   justify-content: center;
   align-items: center;
   background: #fff;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  font-size: 3em;
-  transition: 0.25s;
+  transition: transform .25s;
   transform-style: preserve-3d;
   transform: rotateY(0deg);
+}
+
+.item:hover {
+  transform: scale(1.1);
 }
 
 .item.boxOpen {
@@ -93,13 +97,18 @@ body {
 }
 
 .item::after {
-  content: '';
+  content: '?';
   position: absolute;
   inset: 0;
   background: #fff;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  transition: 0.25s;
+  transition: transform 0.25s;
   transform: rotateY(0deg);
   backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #464973;
 }
