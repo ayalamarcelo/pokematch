@@ -1,6 +1,6 @@
 // Add an event listener to ensure the DOM is fully loaded before running the script.
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const pokemonAPI = {};
 
   fetch("/pokeAPI")
@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
       });
 
       const pokemonIds = [
-        "92", "92", "94", "94", "96", "96", "97", "97",
-        "778", "778", "708", "708", "355", "355", "477", "477"
+        "41", "41", "92", "92","93" ,"93", "94", "94", "96", "96", "97", "97",
+        "104", "104", "105", "105"
       ];
 
       let shuffledPokemonIds = pokemonIds.sort(() => Math.random() - 0.5);
@@ -106,13 +106,13 @@ document.addEventListener("DOMContentLoaded", function() {
                       headers: {
                         "Content-Type": "application/json",
                       },
-                      body: JSON.stringify({user, moves, time})
+                      body: JSON.stringify({ user, moves, time })
                     })
-                    .then((response) => response.json())
-                    .then((data) => console.log(data))
-                    .catch((err) => {
-                      console.log(`Error ${err}`)
-                    });
+                      .then((response) => response.json())
+                      .then((data) => console.log(data))
+                      .catch((err) => {
+                        console.log(`Error ${err}`)
+                      });
                     stopTimer();
                   }, 500);
                 }
@@ -145,3 +145,16 @@ document.addEventListener("DOMContentLoaded", function() {
       console.error(`Error getting Pokémon data ${err}`);
     });
 });
+
+// Leaderboard
+
+const leaderboard = document.getElementById("leaderboard");
+const toggleButton = document.getElementById("toggleLeaderboard");
+
+toggleButton.onclick = function() {
+    if (leaderboard.style.display === "none" || leaderboard.style.display === "") {
+        leaderboard.style.display = "block";
+    } else {
+        leaderboard.style.display = "none";
+    }
+}

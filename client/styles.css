@@ -103,10 +103,10 @@ body {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(-2deg);
+    transform: rotate(-5deg);
   }
   100% {
-    transform: rotate(2deg);
+    transform: rotate(5deg);
   }
 }
 
@@ -116,7 +116,7 @@ body {
 
 .item::after {
   content: '?';
-  color: #707070;  
+  color: #535a4a;  
   position: absolute;
   top: 50%;
   left: 50%;
