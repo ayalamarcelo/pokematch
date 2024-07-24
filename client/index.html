@@ -4,13 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/ico.png">
-    <link rel="stylesheet" href="./buttons.css">
+    <link rel="icon" href="./assets/ico.webp" type="image/webp">
+    <link rel="stylesheet" href="./github-btn.css">
     <link rel="stylesheet" href="./styles.css">
-    <title>PokeMatch</title>
+    <title>Welcome!</title>
 </head>
 
 <body>
+    <div class="github-contain">
+        <!-- Place this tag where you want the button to render. -->
+        <a class="github-button" href="https://github.com/ayalamarcelo"
+            data-color-scheme="no-preference: dark_high_contrast; light: dark_high_contrast; dark: dark_high_contrast;"
+            data-size="large" aria-label="Follow @buttons on GitHub">@Follow me on Github</a>
+    </div>
+
     <section class="container">
         <article class="generators">
             <div id="time">Time: 00:00</div>
@@ -19,11 +26,13 @@
         <main id="game" class="game"></main>
         <div class="container-btn">
             <button type="button" class="reset" onclick="window.location.reload();">
-              <span>Reset Game</span>
+                <span>Reset Game</span>
             </button>
-          </div>
+        </div>
     </section>
 
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="./controlls.js"></script>
     <script src='./index.js'></script>
 </body>
 

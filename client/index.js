@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
       });
 
       const pokemonIds = [
-        "1", "1", "2", "2", "3", "3", "4", "4",
-        "5", "5", "6", "6", "7", "7", "9", "9"
+        "92", "92", "94", "94", "96", "96", "97", "97",
+        "778", "778", "708", "708", "355", "355", "477", "477"
       ];
 
       let shuffledPokemonIds = pokemonIds.sort(() => Math.random() - 0.5);

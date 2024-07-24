@@ -1,72 +1,72 @@
 [
     {
-      "id": 1,
-      "name": "Bulbasaur",
+      "id": 92,
+      "name": "Gastly",
       "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png"
       }
     },
     {
-      "id": 2,
-      "name": "Ivysaur",
+      "id": 93,
+      "name": "Haunter",
       "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png"
       }
     },
     {
-      "id": 3,
-      "name": "Venusaur",
+      "id": 94,
+      "name": "Gengar",
       "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png"
       }
     },
     {
-      "id": 4,
-      "name": "Charmander",
+      "id": 81,
+      "name": "Magnemite",
       "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png"
       }
     },
     {
-      "id": 5,
-      "name": "Charmeleon",
+      "id": 82,
+      "name": "Magneton",
       "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png"
       }
     },
     {
-      "id": 6,
-      "name": "Charizard",
+      "id": 96,
+      "name": "Drowzee",
       "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png"
       }
     },
     {
-      "id": 7,
-      "name": "Squirtle",
+      "id": 97,
+      "name": "Hypno",
       "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png"
       }
     },
     {
-      "id": 8,
-      "name": "Wartortle",
+      "id": 778,
+      "name": "Mimikyu",
       "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/778.png"
       }
     },
     {
-      "id": 9,
-      "name": "Blastoise",
+      "id": 708,
+      "name": "Phantump",
       "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/708.png"
       }
     },
     {
-      "id": 10,
-      "name": "Caterpie",
+      "id": 355,
+      "name": "Duskull",
       "sprites": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png"
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/355.png"
       }
     },
     {
@@ -109,6 +109,13 @@
       "name": "Weezing",
       "sprites": {
         "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png"
+      }
+    },
+    {
+      "id": 477,
+      "name": "Dusknoir",
+      "sprites": {
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/477.png"
       }
     }
   ]

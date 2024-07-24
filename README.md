@@ -1,10 +1,4 @@
-<img src="https://d.furaffinity.net/art/aquillasnail/1685994054/1685994054.aquillasnail_aquillasnail_shapka.gif" width="1200" alt="banner">
-
-###
-
 <h1 align="center">"PokeMatch, gotta match'em all!"</h1>
-
-###
 
 Welcome to PokeMatch! This project allows you to experience the fun of memory games while diving into the exciting world of Pokémon. With PokeMatch, you can test your matching skills as you try to find pairs of your favorite Pokémon.
 

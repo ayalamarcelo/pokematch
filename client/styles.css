@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Press Start 2P", system-ui;
+  font-family: 'ADLaM Display', cursive;
 }
 
 body {
@@ -12,7 +12,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url(./assets/picture-demo.webp)no-repeat;
+  background: url(./assets/background.jpg) no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
@@ -22,32 +23,35 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  background: #fff;
-  padding: 35px 60px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  gap: 25px;
+  background: #f0f1ec;
+  padding: 30px 55px;
 }
 
 .reset {
   display: flex;
-  padding: 18px 20px;
-  color: #fff;
-  background: #464973;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-  border-radius: 5px;
+  padding: 15px 25px;
+  color: #afafaf;
+  background: #313131;
+  box-shadow: 0 5px 0px #707070;
+  border-radius: 4px;
   border: none;
-  font-size: .7em;
+  font-size: 0.9em;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 500;
   transition: background 0.3s, color 0.3s;
 }
 
+.reset:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
 .reset:hover {
-  background: #545591;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  background: #4b4949;
 }
 
 .game {
@@ -58,16 +62,14 @@ body {
   gap: 10px;
   transform-style: preserve-3d;
   perspective: 800px;
-  position: relative;
 }
 
 .generators {
   display: flex;
-  color: #464973;
+  color: #313131;
   justify-content: space-between;
   align-items: center;
-  gap: 11em;
-  font-size: .8em;
+  gap: 14em;
   border-radius: 10px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -80,16 +82,32 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  transition: transform .25s;
+  background: #f0f1ec;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-size: 3em;
+  transition: 0.25s;
   transform-style: preserve-3d;
-  transform: rotateY(0deg);
+  overflow: hidden;
 }
 
-.item:hover {
-  transform: scale(1.1);
+.item img {
+  width: 100%;
+  height: auto;
+  animation: subtleRotate 3s infinite alternate ease-in-out;
+  filter: sepia(0.8) saturate(0.3) hue-rotate(50deg) brightness(0.6);
+}
+
+@keyframes subtleRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
 }
 
 .item.boxOpen {
@@ -98,17 +116,56 @@ body {
 
 .item::after {
   content: '?';
+  color: #707070;  
   position: absolute;
-  inset: 0;
-  background: #fff;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(0deg);
+  background: #f0f1ec;
   border-radius: 10px;
-  transition: transform 0.25s;
-  transform: rotateY(0deg);
+  transition: 0.25s;
   backface-visibility: hidden;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 2em;
-  color: #464973;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+@media (width < 900px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    max-width: 420px;
+    height: 500px;
+    padding: 40px 40px;
+    gap: 20px;
+  }
+
+  .item {
+    max-width: 80px;
+    max-height: 75px;
+  }
+
+  .item img {
+    max-width: 75px;
+    height: auto;
+  }
+
+  .game {
+    max-width: 350px;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .reset {
+    padding: 14px 14px;
+    font-size: 0.8em;;
+  }
+
+  .generators {
+    font-size: 0.9em;
+    gap: 9em;
+  }
 }
