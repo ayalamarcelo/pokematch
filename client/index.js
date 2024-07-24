@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       const pokemonIds = [
-        "41", "41", "92", "92","93" ,"93", "94", "94", "96", "96", "97", "97",
+        "41", "41", "92", "92", "93", "93", "94", "94", "96", "96", "97", "97",
         "104", "104", "105", "105"
       ];
 
@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let timerInterval;
 
       let gameStarted = false;
+      let disableDeck = false;
 
       function stopTimer() {
         clearInterval(timerInterval);
@@ -80,6 +81,8 @@ document.addEventListener("DOMContentLoaded", function () {
         box.onclick = function () {
           initializeTimer();
 
+          if (disableDeck) return;
+
           if (
             flippedCards.length < 2 &&
             !flippedCards.includes(this) &&
@@ -93,8 +96,10 @@ document.addEventListener("DOMContentLoaded", function () {
               const card2 = flippedCards[1].getAttribute("data-id");
 
               if (card1 === card2) {
-                flippedCards = [];
+                flippedCards[0].classList.add("match");
+                flippedCards[1].classList.add("match");
                 matchedPairs++;
+                flippedCards = [];
 
                 if (matchedPairs === shuffledPokemonIds.length / 2) {
                   setTimeout(() => {
@@ -117,12 +122,22 @@ document.addEventListener("DOMContentLoaded", function () {
                   }, 500);
                 }
               } else {
+                disableDeck = true;
+
                 setTimeout(() => {
-                  flippedCards.forEach((card) =>
-                    card.classList.remove("boxOpen")
-                  );
-                  flippedCards = [];
-                }, 1000);
+                  flippedCards.forEach((card) => {
+                    card.classList.add("shake");
+                  });
+
+                  setTimeout(() => {
+                    flippedCards.forEach((card) => {
+                      card.classList.remove("boxOpen", "shake");
+                    });
+                    flippedCards = [];
+                    disableDeck = false;
+                  }, 500);
+
+                }, 500);
               }
 
               updateMoves();
@@ -151,10 +166,10 @@ document.addEventListener("DOMContentLoaded", function () {
 const leaderboard = document.getElementById("leaderboard");
 const toggleButton = document.getElementById("toggleLeaderboard");
 
-toggleButton.onclick = function() {
-    if (leaderboard.style.display === "none" || leaderboard.style.display === "") {
-        leaderboard.style.display = "block";
-    } else {
-        leaderboard.style.display = "none";
-    }
+toggleButton.onclick = function () {
+  if (leaderboard.style.display === "none" || leaderboard.style.display === "") {
+    leaderboard.style.display = "block";
+  } else {
+    leaderboard.style.display = "none";
+  }
 }

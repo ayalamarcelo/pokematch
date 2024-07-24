@@ -132,6 +132,28 @@ body {
   width: 100%;
 }
 
+@keyframes match-animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.item.match {
+  animation: match-animation 0.5s ease;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+.item.shake {
+  animation: shake 0.5s ease;
+}
+
 @media (width < 900px) {
   .container {
     display: flex;
