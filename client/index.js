@@ -173,3 +173,42 @@ toggleButton.onclick = function () {
     leaderboard.style.display = "none";
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('/api/winners')
+      .then(response => response.json())
+      .then(winners => {
+          // Convert time on seconds
+          const timeToSeconds = (time) => {
+              const [minutes, seconds] = time.split(':').map(Number);
+              return (minutes * 60) + seconds;
+          };
+
+          // Order winners for time
+          winners.sort((a, b) => timeToSeconds(a.time) - timeToSeconds(b.time));
+
+          const leaderboardList = document.getElementById('leaderboard-list');
+          leaderboardList.innerHTML = '';
+
+          winners.forEach((winner, index) => {
+              const li = document.createElement('li');
+              let trophyIcon = '';
+              switch (index) {
+                  case 0:
+                      trophyIcon = '<i class="fas fa-trophy" style="color: gold;"></i>';
+                      break;
+                  case 1:
+                      trophyIcon = '<i class="fas fa-trophy" style="color: silver;"></i>';
+                      break;
+                  case 2:
+                      trophyIcon = '<i class="fas fa-trophy" style="color: peru;"></i>';
+                      break;
+              }
+              li.innerHTML = `${winner.user} ${winner.time} ${trophyIcon}`;
+              leaderboardList.appendChild(li);
+          });
+      })
+      .catch(error => {
+          console.error('Error fetching winners:', error);
+      });
+});

@@ -1,7 +1,7 @@
 {
   "name": "nodejs-app",
   "version": "1.0.0",
-  "description": "<h1 align=\"center\">\"PokeMatch, gotta match'em all!\"</h1>",
+  "description": "PokeMatch, gotta match'em all!",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,7 +15,7 @@
     "cors": "2.8.5",
     "dotenv": "16.3.1",
     "express": "^4.19.2",
-    "mongoose": "7.5.2",
+    "mysql2": "^3.10.3",
     "pixel-borders": "^1.1.4"
   },
   "devDependencies": {

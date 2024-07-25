@@ -1,16 +1,26 @@
-const { connectDB, disconnectDB } = require("../connection");
+const { insertWinner, getAllWinners } = require('../database/models/winnerModel');
 
-const winnerUser = require("../database/schemas/winnerSchema");
+const winController = {
+    create: async (req, res) => {
+        try {
+            const { user, time, moves } = req.body;
+            await insertWinner(user, time, moves);
+            res.status(201).json({ message: 'Winner saved successfully!' });
+        } catch (error) {
+            console.error('Error saving winner:', error);
+            res.status(500).json({ error: 'Error saving winner' });
+        }
+    },
 
-const create = async (req, res) => {
-    const { time, moves, user } = req.body;
-    await connectDB();
-    
-    const newUser = new winnerUser({ time, moves, user });
-    
-    const WinUser = await newUser.save();
-    await disconnectDB();
-    res.json(WinUser);
-}
+    list: async (req, res) => {
+        try {
+            const winners = await getAllWinners();
+            res.status(200).json(winners);
+        } catch (error) {
+            console.error('Error fetching winners:', error);
+            res.status(500).json({ error: 'Error fetching winners' });
+        }
+    }
+};
 
-module.exports = { create };
+module.exports = winController;

@@ -1,5 +1,3 @@
-<h1 align="center">"PokeMatch, gotta match'em all!"</h1>
-
 This project allows you to experience the fun of memory games while diving into the exciting world of Pokémon. With PokeMatch, you can test your matching skills as you try to find pairs of your favorite Pokémon.
 
 Stay tuned for an immersive gaming experience where you can catch 'em all!
@@ -23,25 +21,28 @@ $ npm run dev
 ```bash
 $ Server listening on http://localhost:4040
 ```
-Open compass from mongoDB and paste this url to access the scoring:
+
+- Connect to MySQL using the credentials in your database/connection.js file.
 
 ```bash
-$ mongodb+srv://user:password@cluster0.fuv8uu5.mongodb.net/pokeDB
+$ mysql -u user -p
 ```
->[!important]
->Please make sure read test folder.
+Make sure to replace user with your MySQL username and enter your password when prompted.
 
-Here a link for MongoDB usage: [How to get started with MongoDB in 10 minutes](https://www.freecodecamp.org/news/learn-mongodb-a4ce205e7739/)
+> [!important]
+> Please make sure to read the test folder.
+
+Here’s a link for MySQL usage: [How to get started with MySQL](https://dev.mysql.com/doc/mysql-getting-started/en/)
 
 ### Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
->[!important]
->Please make sure to update tests as appropriate.
+> [!important]
+> Please make sure to update tests as appropriate.
 
 ### Coming Soon
 
-- [ ] Leaderboard
-- [ ] Animations
+ - [X] Leaderboard
+ - [X] Animations
