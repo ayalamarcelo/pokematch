@@ -8,7 +8,7 @@ This project allows you to experience the fun of memory games while diving into 
 $ git clone https://github.com/ayalamarcelo/pokematch.git or Fork
 ```
 
-2. Use de package manager.
+2. Use the package manager.
 
 ```bash
 $ npm install
