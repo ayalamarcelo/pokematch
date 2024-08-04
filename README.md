@@ -1,47 +1,14 @@
-This project allows you to experience the fun of memory games while diving into the exciting world of Pokémon. Test your matching skills as you try to find pairs of your favorite Pokémon.
+# Welcome
+This is a demo version of the game. Although I managed to preserve most of the functionalities to deploy it on GitHub Pages.
 
-### Usage
+>[!Note]
+> If you want to collaborate on this project, feel free to do so.
 
-1. Open a new terminal.
+## Pull Requests
+Create a pull request from your feature branch to the main branch.
+Provide a detailed description of your changes in the pull request.
+Mention any relevant issues by including "Closes #issue-number" in your PR description.
 
-```bash
-$ git clone https://github.com/ayalamarcelo/pokematch.git or Fork
-```
+## Issue Tracking
+Please use GitHub Issues to report bugs, suggest new features, or ask questions.
 
-2. Use the package manager.
-
-```bash
-$ npm install
-```
-3. Connect to MySQL using the credentials in your `database/connection.js` file.
-
-```bash
-$ mysql -u user -p
-```
-4. Create the table. Open the `backup.sql` file and copy & paste its content into your MySQL.
-
-Make sure to replace user with your MySQL username and enter your password when prompted.
-Here’s a link for MySQL usage: [How to get started with MySQL](https://dev.mysql.com/doc/mysql-getting-started/en/)
-
-5. Run
- 
-```bash
-$ npm run dev
-```
-6. Follow the localhost URL: 
-
-```bash
-$ Server listening on http://localhost:4040
-```
-
-### Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-> [!important]
-> Please make sure to update tests as appropriate.
-
-### Coming Soon
-
- - [X] Leaderboard
- - [X] Animations
