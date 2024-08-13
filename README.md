@@ -1,4 +1,9 @@
-This project allows you to experience the fun of memory games while diving into the exciting world of Pokémon. Test your matching skills as you try to find pairs of your favorite Pokémon.
+<h1 align="center">Pokematch</h1>
+<p>This project allows you to experience the fun of memory games while diving into the exciting world of Pokémon. Test your matching skills as you try to find pairs of your favorite Pokémon.</p>
+
+<p>Here is a demo of the game: <a href="https://ayalamarcelo.github.io/pokematch/">Pokematch</a></p>
+
+<p>For the full version, follow these next steps:</p>
 
 ### Usage
 
