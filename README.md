@@ -45,8 +45,3 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 > [!important]
 > Please make sure to update tests as appropriate.
-
-### Coming Soon
-
- - [X] Leaderboard
- - [X] Animations
