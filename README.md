@@ -33,6 +33,7 @@ Here’s a link for MySQL usage: [How to get started with MySQL](https://dev.mys
 ```bash
 $ npm run dev
 ```
+
 6. Follow the localhost URL: 
 
 ```bash
