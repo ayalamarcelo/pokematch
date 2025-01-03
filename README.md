@@ -45,4 +45,4 @@ $ Server listening on http://localhost:4040
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 > [!important]
-> Please make sure to update tests as appropriate.
+> Please make sure to update tests as appropriate, thanks.
